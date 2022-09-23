@@ -38,9 +38,11 @@ window.addEventListener('scroll', () => {
     if(scrollTop/(html.scrollHeight - window.innerHeight) > 0.65) {
         document.querySelector('#flip2').style.opacity = '1';
         document.querySelector('.strong2').style.opacity = '1';
+        document.querySelector('h2').style.opacity = '1';
     } else {
         document.querySelector('#flip2').style.opacity = '0';
         document.querySelector('.strong2').style.opacity = '0';
+        document.querySelector('h2').style.opacity = '0';
     }
 
     if (window.innerWidth <= 1200) {
