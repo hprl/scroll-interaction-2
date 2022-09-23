@@ -1,0 +1,176 @@
+body {
+    font-family: 'Malgun Gothic',arial,sans-serif;
+    margin: 0;
+    background: #000;
+    height: 400vh;
+    overflow-x: hidden;
+    color: white;
+}
+
+h1 {
+    font-size: 70px;
+    margin: 0;
+}
+
+.header {
+    padding: 0 50px;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    z-index: 2;
+    background: #121212;
+    color: #c4c4c4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+}
+
+.header img {
+    width: 12px;
+}
+
+.header div {
+    padding: 0 20px;
+}
+
+.header2 {
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    z-index: 2;
+    background: inherit;
+    color: #c4c4c4;
+    top: 40px;
+    opacity: 0.7;
+}
+
+#product-title {
+    position: fixed;
+    top: 40px;
+    z-index: 2;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 0 15%;
+    transition: all 0.5s;
+}
+
+#ipad-canvas {
+    position: sticky;
+    top: 10%;
+    max-height: 200vh;
+    max-width: 100vw;
+}
+
+.ipad-container {
+    height: 200vh;
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    position: relative;
+    left: 5%;
+    top: 25%;
+    z-index: 1;
+    font-weight: lighter;
+}
+
+.strong1 {
+    background-image: linear-gradient(90deg, #ffc170, #ec787f, #8980ed);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.flip-container {
+    display: flex;
+    justify-content: center;
+}
+
+.flip-layout {
+    max-width: 1500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+#flip, #flip2 {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.title2 {
+    position: sticky;
+    top: 30%;
+    z-index: 1;
+}
+
+.title2 h2 {
+    font-size: 30px;
+}
+
+.strong2 {
+    opacity: 0;
+    background-image: linear-gradient(90deg, #ffc170, #ec787f, #8980ed);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    transition: opacity 1s;
+}
+
+@media screen and (max-width: 1000px) {
+
+    body {
+        height: 300vh;
+    }
+
+    .header {
+        padding: 0;
+    }
+
+    .header div:not(:first-child) {
+        display: none;
+    }
+
+    .flip-layout {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .img-layout {
+        height: 300px;
+        display: flex;
+    }
+
+    .img-layout img {
+        object-fit: contain;
+        width: 40%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    #product-title {
+        padding: 0 5%;
+    }
+
+    .title {
+        top: 10%;
+    }
+
+    .title2 {
+        text-align: center;
+    }
+
+    .title h1 {
+        font-size: 50px;
+    }
+
+    .title2 h1 {
+        font-size: 50px;
+    }
+
+    .title2 h2 {
+        font-size: 20px;
+    }
+
+}
